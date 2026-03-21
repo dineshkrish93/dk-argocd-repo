@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nginx
 spec:
-  replicas: 1 # Number of Nginx containers to spin up
+  replicas: 5 # Number of Nginx containers to spin up
   selector:
     matchLabels:
       app: nginx
