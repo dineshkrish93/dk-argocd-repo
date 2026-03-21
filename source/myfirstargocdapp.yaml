@@ -2,10 +2,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  namespace: webapp-dev
   labels:
     app: nginx
 spec:
-  replicas: 5 # Number of Nginx containers to spin up
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -25,6 +26,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
+  namespace: webapp-dev
 spec:
   selector:
     app: nginx
@@ -32,4 +34,4 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-  type: ClusterIP # Keeps the app internal to the cluster by default
+  type: ClusterIP
