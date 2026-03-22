@@ -39,7 +39,7 @@ spec:
 
         - name: container-dinesh-web-viewer
           image: dineshkrish93/dk-public-repo:web-viewer-sample-1.5.2
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
 
