@@ -21,6 +21,7 @@ spec:
       labels:
         app: deployment-dinesh-omniverse-viewer
     spec:
+      hostNetwork: true
       containers:
         - name: container-dinesh-kit-app
           image: dineshkrish93/dk-public-repo:kit-app-editor-1-streaming
@@ -65,9 +66,7 @@ spec:
     - name: web-viewer
       port: 80
       targetPort: 80
-      nodePort: 30080
     - name: webrtc-signaling
       port: 49100
       targetPort: 49100
       protocol: TCP
-      nodePort: 30100
