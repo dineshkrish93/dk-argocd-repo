@@ -14,11 +14,7 @@ spec:
       labels:
         app: omniverse-viewer
     spec:
-      hostNetwork: true        # Both containers share host network — required for WebRTC UDP ports and 127.0.0.1 signaling
-      dnsPolicy: ClusterFirstWithHostNet
-      runtimeClassName: nvidia  # Requires NVIDIA GPU Operator on the cluster
       containers:
-
         - name: kit-app
           image: dineshkrish93/dk-public-repo:kit-app-editor-1-streaming
           env:
@@ -59,4 +55,4 @@ spec:
     - name: web-viewer
       port: 80
       targetPort: 80
-      nodePort: 30080   # Access web viewer at http://<node-ip>:30080
+      nodePort: 30080
