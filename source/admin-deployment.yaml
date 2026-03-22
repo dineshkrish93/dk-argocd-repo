@@ -44,10 +44,12 @@ spec:
           image: dineshkrish93/dk-public-repo:web-viewer-sample-1.5.2
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 8081
           env:
             - name: SIGNALING_PORT
               value: "49101"
+            - name: WEB_PORT
+              value: "8081"
 
       volumes:
         - name: dshm
@@ -70,4 +72,4 @@ spec:
   ports:
     - name: web-viewer
       port: 80
-      targetPort: 80
+      targetPort: 8081
