@@ -1,0 +1,21 @@
+availableWidgets:
+  - id: w1
+    name: Omniverse Kit App
+    inputs: []
+    outputs:
+      - id: out1
+        name: App Data
+        dataType: Any
+canvasWidgets:
+  - id: w1
+    name: Omniverse Kit App
+    inputs: []
+    outputs:
+      - id: out1
+        name: App Data
+        dataType: Any
+    instanceId: inst_1774172394653
+    position:
+      x: 688
+      y: 175
+connections: []
